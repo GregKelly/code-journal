@@ -318,5 +318,3 @@ And I can create a new entry without scrolling back to the top
 - [ ] Entry count is visible
 
 ----
-TEST CODE
-TEST CODE
