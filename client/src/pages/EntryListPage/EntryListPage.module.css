@@ -1,0 +1,123 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  color: var(--color-text-light);
+}
+
+.error p {
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-danger);
+}
+
+.retryButton {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.retryButton:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.emptyState {
+  text-align: center;
+  padding: var(--spacing-2xl);
+}
+
+.emptyState h2 {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text);
+}
+
+.emptyState p {
+  margin-bottom: var(--spacing-xl);
+  color: var(--color-text-light);
+  font-size: var(--font-size-lg);
+}
+
+.emptyStateButton {
+  display: inline-block;
+  padding: var(--spacing-md) var(--spacing-xl);
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  font-size: var(--font-size-lg);
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.emptyStateButton:hover {
+  background-color: var(--color-primary-hover);
+  text-decoration: none;
+}
+
+.header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.header h2 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.count {
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+}
+
+.entryList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.entryCard {
+  display: block;
+  padding: var(--spacing-lg);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.entryCard:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+}
+
+.entryTitle {
+  color: var(--color-text);
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-lg);
+}
+
+.entryDate {
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+
+  .entryCard {
+    padding: var(--spacing-md);
+  }
+
+  .entryTitle {
+    font-size: var(--font-size-base);
+  }
+}

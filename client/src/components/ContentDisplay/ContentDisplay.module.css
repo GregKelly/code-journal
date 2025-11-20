@@ -1,0 +1,224 @@
+.content {
+  line-height: 1.8;
+  word-wrap: break-word;
+}
+
+.content p {
+  margin-bottom: var(--spacing-md);
+}
+
+.content p:last-child {
+  margin-bottom: 0;
+}
+
+.textBlock {
+  margin-bottom: var(--spacing-lg);
+}
+
+.codeBlock {
+  margin: var(--spacing-lg) 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #1e1e1e;
+  border: 1px solid #3a3a3a;
+}
+
+.codeHeader {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: #151515;
+  border-bottom: 1px solid #2b2b2b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.language {
+  font-size: var(--font-size-sm);
+  color: #858585;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.pre {
+  margin: 0;
+  padding: var(--spacing-md);
+  overflow-x: auto;
+  background: #1e1e1e;
+}
+
+.pre code {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  background: transparent;
+  color: #f2f2f2;
+}
+
+/* Override Prism.js default styles */
+:global(.token.comment),
+:global(.token.prolog),
+:global(.token.doctype),
+:global(.token.cdata) {
+  color: #8aa870;
+}
+
+:global(.token.punctuation) {
+  color: #f2f2f2;
+}
+
+:global(.token.property),
+:global(.token.tag),
+:global(.token.boolean),
+:global(.token.number),
+:global(.token.constant),
+:global(.token.symbol),
+:global(.token.deleted) {
+  color: #9cdcfe;
+}
+
+:global(.token.selector),
+:global(.token.attr-name),
+:global(.token.string),
+:global(.token.char),
+:global(.token.builtin),
+:global(.token.inserted) {
+  color: #ce9178;
+}
+
+:global(.token.operator),
+:global(.token.entity),
+:global(.token.url),
+:global(.language-css .token.string),
+:global(.style .token.string) {
+  color: #f2f2f2;
+}
+
+:global(.token.atrule),
+:global(.token.attr-value),
+:global(.token.keyword) {
+  color: #c792ea;
+}
+
+:global(.token.function),
+:global(.token.class-name) {
+  color: #f6d47a;
+}
+
+:global(.token.regex),
+:global(.token.important),
+:global(.token.variable) {
+  color: #f78c6c;
+}
+
+/* Light mode support */
+@media (prefers-color-scheme: light) {
+  .codeBlock {
+    background: #f8f8f8;
+    border-color: var(--color-border);
+  }
+
+  .codeHeader {
+    background: #ececec;
+    border-bottom-color: #d8d8d8;
+  }
+
+  .language {
+    color: #5c5c5c;
+  }
+
+  .pre {
+    background: #f8f8f8;
+  }
+
+  .pre code {
+    color: #1f2328;
+  }
+
+  :global(.token.comment),
+  :global(.token.prolog),
+  :global(.token.doctype),
+  :global(.token.cdata) {
+    color: #6a737d;
+  }
+
+  :global(.token.punctuation) {
+    color: #1f2328;
+  }
+
+  :global(.token.property),
+  :global(.token.tag),
+  :global(.token.boolean),
+  :global(.token.number),
+  :global(.token.constant),
+  :global(.token.symbol),
+  :global(.token.deleted) {
+    color: #005cc5;
+  }
+
+  :global(.token.selector),
+  :global(.token.attr-name),
+  :global(.token.string),
+  :global(.token.char),
+  :global(.token.builtin),
+  :global(.token.inserted) {
+    color: #22863a;
+  }
+
+  :global(.token.operator),
+  :global(.token.entity),
+  :global(.token.url),
+  :global(.language-css .token.string),
+  :global(.style .token.string) {
+    color: #1f2328;
+  }
+
+  :global(.token.atrule),
+  :global(.token.attr-value),
+  :global(.token.keyword) {
+    color: #d73a49;
+  }
+
+  :global(.token.function),
+  :global(.token.class-name) {
+    color: #6f42c1;
+  }
+
+  :global(.token.regex),
+  :global(.token.important),
+  :global(.token.variable) {
+    color: #e36209;
+  }
+}
+
+/* Scrollbar styling for code blocks */
+.pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+.pre::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+.pre::-webkit-scrollbar-thumb {
+  background: #424242;
+  border-radius: 4px;
+}
+
+.pre::-webkit-scrollbar-thumb:hover {
+  background: #4f4f4f;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .pre code {
+    font-size: 13px;
+  }
+
+  .codeBlock {
+    margin: var(--spacing-md) -var(--spacing-md);
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+}
